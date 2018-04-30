@@ -1,14 +1,14 @@
 <template>
   <div id="app">
-    <Example></Example>
+    <InputScene></InputScene>
   </div>
 </template>
 <script>
-  import Example from "./components/Example";
+  import InputScene from "./components/input-scene";
 
   export default {
     components: {
-      Example
+      InputScene
     }
   };
 </script>

@@ -17,7 +17,7 @@
         <span>.</span>
       </div>
 
-      <button>DONE → </button>
+      <button>DONE</button>
     </form>
   </div>
 </template>
