@@ -1,4 +1,5 @@
 <?php
+
 use App\Task;
 use Illuminate\Http\Request;
 
@@ -14,14 +15,18 @@ use Illuminate\Http\Request;
 */
 
 Route::get('/', function () {
-  $tasks = Task::orderBy('created_at', 'asc')->get();
+  return view('index');
+});
 
+Route::get('/tasks', function () {
+  $tasks = Task::orderBy('created_at', 'desc')->get();
   return view('tasks', [
     'tasks' => $tasks
   ]);
 });
 
-Route::post('/task', function (Request $request) {
+Route::post('/add_task', function (Request $request) {
+
   $validator = Validator::make($request->all(), [
     'name' => 'required|max:255',
   ]);
@@ -36,11 +41,11 @@ Route::post('/task', function (Request $request) {
   $task->name = $request->name;
   $task->save();
 
-  return redirect('/');
+  return redirect('/tasks');
 });
 
 Route::delete('/task/{task}', function (Task $task) {
   $task->delete();
 
-  return redirect('/');
+  return redirect('/tasks');
 });

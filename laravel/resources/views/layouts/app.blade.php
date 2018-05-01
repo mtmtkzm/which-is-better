@@ -14,11 +14,8 @@
 
 <nav class="navbar navbar-default">
     <div class="container">
-        <!-- navbar  -->
         <div class="navbar-header">
-            <a class="navbar-brand" href="{{ url('/')  }}">
-                Task List
-            </a>
+            <a class="navbar-brand" href="{{ url('/')  }}">Task List</a>
         </div>
     </div>
 </nav>
