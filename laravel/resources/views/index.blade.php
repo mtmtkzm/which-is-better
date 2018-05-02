@@ -17,11 +17,12 @@
 
                     <!-- Task Name  -->
                         <div class="form-group">
-                            <label for="task-name" class="col-sm-3 control-label">Task</label>
+                            <label class="col-sm-3 control-label">Task</label>
                             <div class="col-sm-6">
-                                <input type="text" name="name" id="task-name" class="form-control">
-                                <button type="submit" class="btn btn-default fa fa-btn fa-plus"></button>
+                                <input type="text" name="name" class="form-control" placeholder="name">
+                                <input type="text" name="than" class="form-control" placeholder="than">
                             </div>
+                            <button type="submit" class="btn btn-default fa fa-btn fa-plus"></button>
                         </div>
 
                     </form>

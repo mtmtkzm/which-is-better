@@ -20,6 +20,7 @@ Route::get('/', function () {
 
 Route::get('/tasks', function () {
   $tasks = Task::orderBy('created_at', 'desc')->get();
+
   return view('tasks', [
     'tasks' => $tasks
   ]);
@@ -27,18 +28,10 @@ Route::get('/tasks', function () {
 
 Route::post('/add_task', function (Request $request) {
 
-  $validator = Validator::make($request->all(), [
-    'name' => 'required|max:255',
-  ]);
-
-  if ($validator->fails()) {
-    return redirect('/')
-      ->withInput()
-      ->withErrors($validator);
-  }
-
   $task = new Task;
+  $task->than = $request->than;
   $task->name = $request->name;
+
   $task->save();
 
   return redirect('/tasks');

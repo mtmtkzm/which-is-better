@@ -9,7 +9,7 @@
                 <ul>
                     @foreach($tasks as $task)
                         <li>
-                            <div>{{$task->updated_at}}「{{$task->name}}」</div>
+                            <div>「name:{{$task->name}}」「than:{{$task->than}}」</div>
                             <form action="{{ url('task/'.$task->id) }}" method="POST">
                                 {{ csrf_field() }}
                                 {{ method_field('DELETE') }}
