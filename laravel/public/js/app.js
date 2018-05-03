@@ -14929,20 +14929,17 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("nav", [
-      _c("a", { attrs: { href: "" } }, [_vm._v("link")]),
+  return _c(
+    "nav",
+    [
+      _c("router-link", { attrs: { to: "/" } }, [_vm._v("TOP")]),
       _vm._v(" "),
-      _c("a", { attrs: { href: "" } }, [_vm._v("link2")])
-    ])
-  }
-]
+      _c("router-link", { attrs: { to: "/about" } }, [_vm._v("About")])
+    ],
+    1
+  )
+}
+var staticRenderFns = []
 render._withStripped = true
 module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
